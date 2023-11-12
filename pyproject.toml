@@ -14,4 +14,5 @@ license = {text = "MIT"}
 docs = [
     "mkdocs>=1.5.3",
     "mkdocs-material>=9.4.8",
+    "markdown-callouts>=0.3.0",
 ]
