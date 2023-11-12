@@ -1,5 +1,5 @@
 # CONFIGURATION -------------------------
-_min_copier_version: "8"
+_min_copier_version: "9"
 _envops:
   autoescape: false
   keep_trailing_newline: true
@@ -26,17 +26,12 @@ project_description:
 author_fullname:
   type: str
   help: Your full name
-  default: "{{ 'Timothée Mazzucotelli' | git_user_name }}"
+  default: "{{ 'Dennis Bücker' | git_user_name }}"
 
 author_email:
   type: str
   help: Your email
-  default: "{{ 'pawamoy@pm.me' | git_user_email }}"
-
-author_username:
-  type: str
-  help: Your username (e.g. on GitHub)
-  default: pawamoy
+  default: "{{ 'me@laenan.de' | git_user_email }}"
 
 repository_provider:
   type: str
@@ -44,6 +39,18 @@ repository_provider:
   default: github.com
   choices:
   - github.com
+  - gitlab.com
+
+author_username:
+  type: str
+  help: Your username (e.g. on GitHub)
+  default: |-
+      {% if repository_provider == 'github.com' %}
+      laenan8466
+      {% elif repository_provider == 'gitlab.com' %}
+      Laenan
+      {% else %}
+      {% endif %}
 
 repository_namespace:
   type: str
@@ -73,7 +80,7 @@ copyright_date:
 copyright_license:
   type: str
   help: Your project's license
-  default: ISC License
+  default: MIT License
   choices:
   - Academic Free License v3.0
   - Apache License 2.0
@@ -111,32 +118,15 @@ copyright_license:
 
 python_package_distribution_name:
   type: str
-  help: Your Python package distribution name (for `pip install NAME`)
+  help: Your Python package distribution name (for `pip install NAME`). Empty if not planned.
   default: "{{ project_name | slugify }}"
 
 python_package_import_name:
   type: str
-  help: Your Python package import name (for `import NAME` in Python code)
+  help: Your Python package import name (for `import NAME` in Python code). Empty if not planned.
   default: "{{ project_name | slugify('_') }}"
 
 python_package_command_line_name:
   type: str
-  help: Your CLI name if any (for use in the shell)
+  help: Your CLI name if any (for use in the shell). Empty if not planned.
   default: "{{ project_name | slugify }}"
-
-insiders:
-  type: bool
-  help: Does this project have an Insiders version?
-  default: false
-
-insiders_repository_name:
-  type: str
-  help: Your Insiders repository name
-  default: "{{ repository_name }}"
-  when: "{{ insiders }}"
-
-public_release:
-  type: bool
-  help: Is this project already released publicly?
-  default: false
-  when: "{{ insiders }}"
