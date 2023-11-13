@@ -14,6 +14,14 @@ pipx install pdm
 pipx install copier
 ```
 
+Currently for tests additionally these packages are needed:
+
+```bash
+pipx install safety
+```
+
+- **safety**: is called not from within the pdm multirun environment, therefore is using the local installation.
+
 The project has provided a `pyproject.toml` to setup a python development environment, especially with the docs.
 
 ```bash
