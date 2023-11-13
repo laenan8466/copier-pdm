@@ -13,7 +13,7 @@ echo
 generate "${PWD}" "${output}"
 cd "${output}"
 git init .
-git remote add origin https://github.com/pawamoy/pawamoy-testing
+git remote add origin https://github.com/laenan8466/pawamoy-testing
 
 echo
 echo "///////////////////////////////////////////"
@@ -60,3 +60,11 @@ echo "             UPDATING PROJECT"
 echo "///////////////////////////////////////////"
 echo
 copier update -f --trust
+
+echo
+echo "///////////////////////////////////////////"
+echo "            CLEANUP VENV"
+echo "///////////////////////////////////////////"
+echo
+echo ">>> Consider removing these venvs manually:"
+pdm venv list
