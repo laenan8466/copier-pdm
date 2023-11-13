@@ -14,17 +14,38 @@ pipx install pdm
 pipx install copier
 ```
 
+The project has provided a `pyproject.toml` to setup a python development environment, especially with the docs.
+
+```bash
+pdm install
+```
+
 ## Running tests
 
 To run the tests, use:
 
+```bash
+pdm run make test
+pdm run make clean
 ```
+
+or
+
+```bash
 make test
 ```
 
+**Attention**: This has to be done on a Unix (e.g. WSL2 on Windows) system, to have `make` availible.
+
 ## Serving docs
 
-You can create a new virtualenv
+When you used `pdm` to setup your environment, simply use:
+
+```bash
+pdm run mkdocs serve
+```
+
+Alternatively, you can create a new virtualenv
 and install `mkdocs` and `mkdocs-material`:
 
 ```bash
