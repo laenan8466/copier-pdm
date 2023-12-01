@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- insertion marker -->
+## [1.2.0](https://github.com/laenan8466/copier-pdm/releases/tag/1.2.0) - 2023-11-13
+
+This is the first version on my personal github, after fork.
+
+<small>[Compare with 1.1.3](https://github.com/laenan8466/copier-pdm/compare/1.1.3...1.2.0)</small>
+
+### Features
+
+- Personalization ([8a743f5](https://github.com/laenan8466/copier-pdm/commit/8a743f59e45cb059bcd773a65ff46b93fc535103) by Laenan).
+- Change to venv default ([05081ae](https://github.com/laenan8466/copier-pdm/commit/05081aecdf18da81477b0ac7f791408b337f824e) by Laenan).
+
 ## [1.1.3](https://github.com/pawamoy/copier-pdm/releases/tag/1.1.3) - 2023-11-08
 
 <small>[Compare with 1.1.2](https://github.com/pawamoy/copier-pdm/compare/1.1.2...1.1.3)</small>

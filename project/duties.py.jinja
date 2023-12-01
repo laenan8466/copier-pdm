@@ -194,26 +194,7 @@ def docs_deploy(ctx: Context) -> None:
         ctx: The context instance (passed automatically).
     """
     os.environ["DEPLOY"] = "true"
-    with material_insiders() as insiders:
-        if not insiders:
-            ctx.run(lambda: False, title="Not deploying docs without Material for MkDocs Insiders!")
-        {%- if insiders %}
-        origin = ctx.run("git config --get remote.origin.url", silent=True)
-        if "{{ author_username }}-insiders/{{ insiders_repository_name }}" in origin:
-            ctx.run("git remote add upstream git@github.com:{{ repository_namespace }}/{{ repository_name }}", silent=True, nofail=True)
-            ctx.run(
-                mkdocs.gh_deploy(remote_name="upstream", force=True),
-                title="Deploying documentation",
-            )
-        else:
-            ctx.run(
-                lambda: False,
-                title="Not deploying docs from public repository (do that from insiders instead!)",
-                nofail=True,
-            )
-        {%- else %}
-        ctx.run(mkdocs.gh_deploy(), title="Deploying documentation")
-        {%- endif %}
+    ctx.run(mkdocs.gh_deploy(), title="Deploying documentation")
 
 
 @duty
