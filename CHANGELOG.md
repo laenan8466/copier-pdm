@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- insertion marker -->
+## [1.3.0](https://github.com/laenan8466/copier-pdm/releases/tag/1.3.0) - 2023-12-02
+
+<small>[Compare with 1.2.0](https://github.com/laenan8466/copier-pdm/compare/1.2.0...1.3.0)</small>
+
+### Features
+
+- update from upstream (#4) ([061b846](https://github.com/laenan8466/copier-pdm/commit/061b846144c693e17329116db7d5895468faf299) by Dennis Bücker). Co-authored-by: Timothée Mazzucotelli <pawamoy@pm.me>
+
+### Bug Fixes
+
+- duties - mkdocs gh-deploy ([91c4dd4](https://github.com/laenan8466/copier-pdm/commit/91c4dd4a509856859e2857fbd3b0c20eb68a5480) by Laenan).
+
 ## [1.2.0](https://github.com/laenan8466/copier-pdm/releases/tag/1.2.0) - 2023-11-13
 
 This is the first version on my personal github, after fork.
