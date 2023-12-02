@@ -9,11 +9,6 @@ for Python projects managed by [PDM](https://github.com/pdm-project/pdm).
 This copier template in my personal implementation of [pawamoy/copier-pdm](https://github.com/pawamoy/copier-pdm) and for my own usage,
 but feel free to try it out, or fork it! But I recommend that you start with [pawamoy](https://github.com/pawamoy)s repository.
 
-Also checkout [copier-poetry](https://github.com/pawamoy/copier-poetry),
-which is the same template
-but with [Poetry](https://github.com/python-poetry/poetry) instead of PDM.
-If you are using it, see [how to migrate to copier-pdm](https://pawamoy.github.io/copier-pdm/migrate).
-
 ## Features
 
 - ~~Support for Insiders versions of projects (e.g. see [@pawamoy's insiders](https://pawamoy.github.io/insiders/))~~ go to [the original](https://github.com/pawamoy/copier-pdm) for that.
